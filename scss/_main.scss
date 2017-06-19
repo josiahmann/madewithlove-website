@@ -1,0 +1,188 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Futura', sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 72px;
+}
+h1 + a {
+    font-size: 26px;
+}
+h2 {
+    font-size: 56px;
+}
+
+h2 + a,
+h2 + p {
+    font-size: 26px;
+}
+
+p {
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    font-family: 'Futura', sans-serif;
+}
+
+
+section,
+#site {
+    height: 100%;
+    min-height: 600px;
+}
+.section--tall {
+    height: auto;
+    padding: 100px 0; 
+}
+.container {
+    width: 1080px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* White Section */
+.white-section {
+    background: white;
+}
+.white-section h1 {
+    color: $dark-grey;
+}
+
+/* Orange Section */
+.orange-section {
+    background: $orange;
+}
+
+
+/* Purple Section */
+.purple-section {
+    background: $purple;
+}
+
+
+.card {
+   cursor: pointer;
+    padding: 100px 20px;
+    -webkit-box-shadow: 3px 2px 8px 0 rgba(0,0,0,0.50);
+    box-shadow: 3px 2px 8px 0 rgba(0,0,0,0.50);
+    border: none;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    height: 100%;
+    position: relative;
+    opacity: .7;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.card--hover {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transform:  translateY(-3px) translateX(3px);
+    -ms-transform:  translateY(-3px) translateX(3px);
+    -o-transform:  translateY(-3px) translateX(3px);
+    transform:  translateY(-3px) translateX(3px);
+    opacity: 1;
+}
+
+.card--hover.card--orange {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    background: $orange;
+    color: white;
+}
+
+.card--hover.card--purple {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
+}
+.card input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-appearance: none;
+    outline:none!important;
+}
+
+.range-slider > div {
+    -ms-align-self: baseline;
+    align-self: baseline;
+}
+.range-slider__left,
+.range-slider__right {
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -o-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.range-slider__center {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    margin: 0 20px;
+}
+.slider-input {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
+/* Helper Classes */
+
+.flex {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.orange {
+    color: $orange!important;
+}
+.purple {
+    color: $purple!important;
+}
+.white {
+    color: white!important;
+}
+.light-grey {
+    color: $light-grey!important;
+}
+.dark-grey {
+    color: $dark-grey!important;
+}
