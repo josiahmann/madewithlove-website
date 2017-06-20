@@ -11,20 +11,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" crossorigin="anonymous">
+
         <link rel="stylesheet" href="public/css/bundle.min.css">
     </head>
     <body>
     <form id="site" action="">
 
-        <section id="section-1" class="white-section">
-            <div class="container vertical-align text-center">
-                <h1>We make websites that work.</h1>
-                <a href="#section-2" class="d-inline-block orange mt-2">Tell me more.</a>
+        <section id="section-1" class="white-section section--full">
+            <div class="container text-center">
+                <!-- <h1 class="typed d-inline-block"></h1> -->
+                <h1 class="wow fadeIn" data-wow-duration=".8s">We make websites that work.</h1>
+                
+                <a href="#section-2" class="d-block orange mt-2 wow fadeInDown" data-wow-delay="1.2s">Tell me more.</a>
             </div>
         </section>
 
         <section id="section-2" class="orange-section">
-            <div class="container vertical-align text-center">
+            <div class="container text-center">
                 <h2 class="white">Okay.</h2>
                 <h2 class="mt-5 white">But before we start rambling on about ourselves, we’d like to get to know you a little bit about you.</h2>
                 <a href="#section-3" class="d-inline-block mt-5 purple">What do you want to know?</a>
@@ -32,23 +35,23 @@
         </section>
 
         <section id="section-3" class="purple-section">
-            <div class="container vertical-align text-center">
-                <h2 class="white">What matters most to you about your new website?</h2>
+            <div class="container text-center">
+                <h2 id="what-matters" class="white">What matters most to you about your new website?</h2>
                 <p class="mt-2 orange">(Select one)</p>
                 <div class="row mt-5">
-                    <div class="col-xs-24 col-md-4">
+                    <div class="col-xs-24 col-md-4 mb-4">
                         <div class="card card--radio">
                             <input type="radio" name="priority" value="features" />
                             <p class="vertical-align">I need a lot of features<br> and functionality.</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4">
+                    <div class="col-xs-24 col-md-4 mb-4">
                         <div class="card card--radio">
                             <input type="radio" name="priority" value="price"/>
                             <p class="vertical-align">I want the lowest<br> possible price.</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4">
+                    <div class="col-xs-24 col-md-4 mb-4">
                         <div class="card card--radio">
                             <input type="radio" name="priority" value="personalization" />
                             <p class="vertical-align">I want complete control<br> over the design process or<br>  I already have designs.</p>
@@ -64,55 +67,55 @@
                 <h2 class="mt-5">What are some of the features your new website will need?</h2>
                 <p class="mt-2 mb-5 orange">(Select all that apply)</p>
                 <div class="row">
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="ecommerce"/>
                             <p>Ecommerce / ability to sell products online</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="member"/>
                             <p>Member login / private member-only content</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="blog"/>
                             <p>Blog or articles</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="lms"/>
                             <p>Online courses / learning management software</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="forums"/>
                             <p>Community forums</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="directory"/>
                             <p>Job board / business directory</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="social-network"/>
                             <p>Social network</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="mobile-app"/>
                             <p>Mobile app</p>
                         </div>
                     </div>
-                    <div class="col-xs-24 col-md-4 mb-4">
+                    <div class="col-xs-24 col-sm-6 col-md-4 mb-4">
                         <div class="card card--checkbox card--orange">
                             <input type="checkbox" name="features" value="other"/>
                             <p>Other (please be as detailed as necessary)</p>
@@ -125,31 +128,196 @@
 
 
         <section id="section-4" class="orange-section">
-            <div class="container vertical-align text-center">
+            <div class="container text-center">
                 <h2 class="white">Awesome possum.</h2>
                 <h2 class="my-5 white">What is your estimated timeline for this project?</h2>
-                <div class="range-slider d-flex">
-                    <div class="range-slider__left white">1 month</div>
-                    <div id="timeSlider" class="mt-5 mb-3 range-slider__center"></div>
-                    <div class="range-slider__right white">12+ months</div>
+                <p class="mt-2 mb-5 white">(Select one)</p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>< 1 month</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>1 to 3 months</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>3 to 6 months</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>6+ months</p>
+                        </div>
+                    </div>                    
                 </div>
-                <input id="timeline" class="slider-input" type="text" value="6-8 months" readonly="true" />
             </div>
         </section>
 
-        <section id="section-4" class="purple-section">
-            <div class="container vertical-align text-center">
+        <section id="section-5" class="purple-section">
+            <div class="container text-center">
                 <h2 class="white">Almost done.</h2>
                 <h2 class="my-5 white">What is your estimated budget for this project?</h2>
-                <div class="range-slider d-flex">
-                    <div class="range-slider__left white">$5k</div>
-                    <div id="priceSlider" class="mt-5  mb-3 range-slider__center"></div>
-                    <div class="range-slider__right white">$45k+</div>
+                <p class="mt-2 mb-5 white">(Long term financing available for all options)</p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>< $3k</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>$3k-5k</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>$5-10k</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card card--radio">
+                            <input type="radio" name="features" value="ecommerce"/>
+                            <p>$10k+</p>
+                        </div>
+                    </div>                 
                 </div>
-                <input type="text" class="slider-input" id="price" value="$20-30k" readonly="true" />
             </div>
         </section>
 
+
+        <section id="section-6" class="white-section section--tall">
+            <div class="container text-center">
+                <!-- <h1 class="typed d-inline-block"></h1> -->
+                <h2>Perfect.</h2>
+                <h2 class="my-5">Last step.</h2>
+
+                <div class="container--small text-slider text-left pb-2">
+                    <p>Before we continue this conversation, we want you to know a couple things about us.</p>
+                    <p class="mt-4">First off, we’re not in a hurry to get you to buy something. Web design projects are built around real relationships with real people. And if you want to <em>actually grow your business</em> through your website those relationships will last much longer than the length of the initial project.</p>
+                    <p class="mt-4">As a result, it’s important to us that we work with people and on projects that we honestly feel good about.</p>
+                    <p class="mt-4">If you’d like to get to know more about who we are and what it’s like to work with us, fill out the form below.</p>
+                </div>
+                <div class="container--small mt-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="text" name="firstName" placeholder="First Name"/>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <input type="text" name="lastName" placeholder="Last Name"/>
+                        </div>    
+                        <div class="col-md-12 mt-4">
+                            <input type="email" name="email" placeholder="Email Address"/>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <input type="phone" name="phone" placeholder="Phone Number" />
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <input type="submit" value="Start a conversation" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="section-7" class="orange-section">
+            <div class="container text-center">
+                <h2 class="white">What some of our clients have said about working with us</h2>
+                <div class="slicky text-left mt-5">
+                    <div class="card card--testimonial card--no-hover p-5">
+                        <p class="mb-3">Resonant Themes was great to work with.</p>
+                        <p class="mb-3">I had interviewed other web designers in the process of trying to find someone to build a site for my new guitar studio, but the other designers I met with always talked over me and seemed to have their own agendas, instead of being customer focused.</p>
+                        <p class="mb-3">When you hire Resonant Themes, you get people who are focused on you, as the customer, and have no other agenda than to see that you’re satisfied and that your website is the best!</p>
+                        <p class="mb-3">The best part of meeting and working with Josiah Mann, the owner, was the way he listened to and respected my ideas. He’s very creative with the design process and extremely knowledgeable in the areas required to build a great website. If I had questions about the process or made suggestions as to changes that needed to be made, Josiah was very responsive.</p>
+                        <p class="text-right">Gary Page</p>
+                    </div>
+                   
+                    <div class="card card--testimonial card--no-hover p-5">
+                        <p class="mb-3">When I first started my kitchen and bath resurfacing business, I was using dated and conventional conventional marketing techniques and struggling to get clients. My business was in serious trouble and I had no idea what my next move would be. I was then advised by a business associate that I needed a website.</p>
+                        <p class="mb-3">That all sounded well and good, but who was I to hire to create a website for me?</p>
+                        <p class="mb-3">On the advice of a friend who had hired a local web design company and turned his business turn around in a very short time, I contacted Resonant Themes. The staff there was very friendly, answered all my questions about advertising on the web, and I felt extremely comfortable about hiring them. In a very short time they created a beautiful and stream lined website, complete with SEO. Within just a few short weeks my phone started to ring and has never stopped.</p>
+                        <p class="mb-3">In short, Resonant Themes saved my business and I cannot recommend them highly enough.</p>
+                        <p class="text-right">Mark H.</p>
+                    </div>
+                    <div class="card card--testimonial card--no-hover p-5">
+                        <p class="mb-3">Josiah and his team are responsive, attentive to details, and flexible with last-minute changes. I know that my projects are in good hands with them and that will deliver quality work.</p>
+                        <p class="mb-3">The biggest plus? They are extremely pleasant to work with!</p>
+                        <p class="mb-4">I highly recommend them for your next web development project.</p>
+                        <p class="text-right">Wendy S.</p>
+                    </div>                    
+                </div>
+                
+            </div>
+        </section>
+        <section id="section-8" class="purple-section">
+            <div class="container text-center">
+                <h2 class="white">Some of the companies we have the pleasure of working with</h2>
+                <div class="slick-logos text-center mt-5">
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://frankiesmission.org/" target="_blank">
+                                <span class="d-block">Frankie's Mission</span>
+                                <img class="mt-3" src="public/img/frankies-mission.png">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://garysguitarstudio.com/" target="_blank">
+                                <span class="d-block">Gary's Guitar Studio</span>
+                                <img class="mt-3" src="public/img/garys-guitar-studio.png">
+                            </a>
+                        </p>
+                        
+                    </div>
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://rachelplatten.com/" target="_blank">
+                                <span class="d-block">Rachel Platten</span>
+                                <img class="mt-3" src="public/img/rachel-platten.png">
+                            </a>
+                        </p>
+                        
+                    </div>
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://rgccar.com/" target="_blank">
+                                <span class="d-block">RGC Car</span>
+                                <img class="mt-3" src="public/img/rgc-car.png">
+                            </a>
+                        </p>
+                       
+                    </div>
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://www.s-curverecords.com/" target="_blank">
+                                <span class="d-block">S Curve Records</span>
+                                <img class="mt-3" src="public/img/s-curve.jpg">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card card--no-hover p-5">
+                        <p class="mb-3">
+                            <a class="dark-grey" href="http://andygrammer.com/" target="_blank">
+                                <span class="d-block">Andy Grammer</span>
+                                <img class="mt-3" src="public/img/andy-grammer.png">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </form>
 
@@ -157,8 +325,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/nouislider.min.js"></script>
-
+        <script src="js/vendor/wow.min.js"></script>
+        <script src="js/vendor/slick.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

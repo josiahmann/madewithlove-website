@@ -1,10 +1,21 @@
 html,
 body {
-    height: 100%;
+    height: 100vh;
     font-family: 'Futura', sans-serif;
     line-height: 1.2;
 }
-
+em {
+    font-style: italic;
+}
+body {
+    opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+body.loaded {
+    opacity: 1;
+}
 h1 {
     font-size: 72px;
 }
@@ -31,24 +42,35 @@ a {
 input {
     font-family: 'Futura', sans-serif;
 }
-
-
-section,
+input[type="submit"] {
+    cursor: pointer;
+}
+img {
+    width: auto;
+    max-width: 100%;
+}
 #site {
-    height: 100%;
-    min-height: 600px;
+    height: 100vh;
 }
-.section--tall {
-    height: auto;
+
+section {
     padding: 100px 0; 
+    height: auto;
+    min-height: 100vh;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
 }
+
 .container {
     width: 1080px;
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
+    -ms-align-self: center;
+    align-self: center;
 }
-
-
 /* White Section */
 .white-section {
     background: white;
@@ -61,7 +83,6 @@ section,
 .orange-section {
     background: $orange;
 }
-
 
 /* Purple Section */
 .purple-section {
@@ -82,7 +103,7 @@ section,
     border-radius: 1px;
     height: 100%;
     position: relative;
-    opacity: .7;
+    opacity: .85;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
@@ -96,6 +117,9 @@ section,
     transform:  translateY(-3px) translateX(3px);
     opacity: 1;
 }
+.card--no-hover {
+    opacity: 1!important;
+}
 
 .card--hover.card--orange {
     -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
@@ -107,6 +131,20 @@ section,
 .card--hover.card--purple {
     -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
     box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
+}
+.card.slick-slide {
+    margin: 10px;
+}
+.card--testimonial {
+    cursor: default;
+}
+
+.card.slick-slide:not(.slick-current) {
+    box-shadow: none;
+}
+.card.slick-slide img {
+    max-height: 80px;
+    width: auto;
 }
 .card input {
     cursor: pointer;
@@ -120,33 +158,13 @@ section,
     -webkit-appearance: none;
     outline:none!important;
 }
-
-.range-slider > div {
-    -ms-align-self: baseline;
-    align-self: baseline;
+.container--small {
+    width: 600px;
+    margin: 0 auto;
+    max-width: 100%;
 }
-.range-slider__left,
-.range-slider__right {
-    -webkit-flex: 0 0 auto;
-    -moz-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    -o-flex: 0 0 auto;
-    flex: 0 0 auto;
-}
-.range-slider__center {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
-    margin: 0 20px;
-}
-.slider-input {
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 26px;
-    text-align: center;
+.text-slider p {
+    font-size: 22px;
 }
 /* Helper Classes */
 
@@ -186,3 +204,63 @@ section,
 .dark-grey {
     color: $dark-grey!important;
 }
+
+
+/* Ids */
+#what-matters {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+#section-6 {
+    min-height: 0;
+}
+#section-6 input {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    outline: 0;
+}
+#section-6 input:not([type="submit"]) {
+    border-bottom: 1px solid #c4c4c4;
+}
+#section-6 input[type="submit"] {
+    background: $orange;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 980px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    h1{
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+    .container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 767px) {
+
+    h2 {
+        font-size: 38px;
+    }
+    .text-slider p {
+        font-size: 22px;
+    }
+}
+
+
+
+

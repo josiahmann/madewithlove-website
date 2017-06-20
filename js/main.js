@@ -13,66 +13,34 @@ $(document).ready(function() {
 			features[$(this).val()] = $(this).prop('checked');				
 	});
 
-  var price = $('#price');
-  var timeline = $('#timeline');
+  new WOW().init();
+  
+  $('.slicky').slick({
+    lazyLoad: 'ondemand',
+    dots: true,
+    adaptiveHeight: true
+  });
 
-  // setup noUiSlider for project range
-   $('#priceSlider').noUiSlider({
-      range: [5, 45],
-      start: [20, 30],
-      step: 5,
-      pips: {
-        mode: 'range',
-        density: 10
-      },
-      connect: true,
-      behaviour: 'extend-tap',
-      slide: function() {
-          price.val("");
-          var e = $(this).val();
-          price.val("$" + e[0] + "-" + e[1] + "k");
-          if (e[0] == e[1]) {
-              if (e[0] == "45") {
-                  price.val("$" + e[0] + "k +")
-              } else {
-                  price.val("$" + e[0] + "k")
-              }
-          } else if (e[1] == "45"){
-              price.val("$" + e[0] + "-" + e[1] + "k+")
-          }
-      },
-      serialization: {
-          resolution: 1
+  $('.slick-logos').slick({
+    lazyLoad: 'ondemand',
+    dots: true,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+    {
+      breakpoint: 980,
+      settings: {
+        slidesToShow: 2
       }
+    }, 
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
-
-  // setup noUiSlider for timeline range
- $('#timeSlider').noUiSlider({
-    range: [1, 12],
-    start: [6, 9],
-    step: 1,
-    connect: true,
-    behaviour: 'extend-tap',
-    slide: function() {
-        timeline.val("");
-        var e = $(this).val();
-        timeline.val(e[0] + "-" + e[1] + " months");
-        if (e[0] == e[1]) {
-            if (e[0] == "12") {
-                timeline.val(e[0] + "+ months")
-            } else {
-                timeline.val(e[0] + " months")
-            }
-        } else if (e[1] == "12"){
-            timeline.val(e[0] + "-" + e[1] + "+ months")
-        }
-    },
-    serialization: {
-        resolution: 1
-    }
-  });
-
-
 
   // Select all links with hashes
   $('a[href*="#"]')
@@ -110,4 +78,9 @@ $(document).ready(function() {
         }
       }
     });
+
+});
+$(window).load(function() {
+  // When the page has loaded
+  $("body").addClass('loaded');
 });
