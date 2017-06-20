@@ -57,6 +57,9 @@ section {
     padding: 100px 0; 
     height: auto;
     min-height: 100vh;
+    display: none;
+}
+.section--visible {
     -webkit-display: flex;
     -moz-display: flex;
     -ms-display: flex;
@@ -212,10 +215,10 @@ section {
     max-width: 100%;
     margin: 0 auto;
 }
-#section-6 {
+#section-7 {
     min-height: 0;
 }
-#section-6 input {
+#section-7 input {
     height: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -224,10 +227,10 @@ section {
     width: 100%;
     outline: 0;
 }
-#section-6 input:not([type="submit"]) {
+#section-7 input:not([type="submit"]) {
     border-bottom: 1px solid #c4c4c4;
 }
-#section-6 input[type="submit"] {
+#section-7 input[type="submit"] {
     background: $orange;
     color: #fff;
 }
