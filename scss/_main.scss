@@ -58,6 +58,7 @@ section {
     height: auto;
     min-height: 100vh;
     display: none;
+    position: relative;
 }
 .section--visible {
     -webkit-display: flex;
@@ -214,6 +215,37 @@ section {
     width: 650px;
     max-width: 100%;
     margin: 0 auto;
+}
+#section-1 {
+    z-index: 10;
+}
+
+#section-2 {
+    z-index: 9;
+}
+#section-3 {
+    z-index: 8;
+}
+#section-4 {
+    z-index: 7;
+}
+#section-5 {
+    z-index: 6;
+}
+#section-6 {
+    z-index: 5;
+}
+#section-7 {
+    z-index: 4;
+}
+#section-8 {
+    z-index: 3;
+}
+#section-9 {
+    z-index: 2;
+}
+#section-10 {
+    z-index: 1;
 }
 #section-7 {
     min-height: 0;

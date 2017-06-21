@@ -18,57 +18,67 @@ $(document).ready(function() {
     var anchorToggle = $(this).find('a.js-toggle-' + (i + 2));
     var inputToggle = $(this).find('input.js-toggle-' + (i + 2));
     
-    anchorToggle.click(function(){
-      $('#section-' + (i + 2)).addClass('section--visible');
+    anchorToggle.click(function(e){
+      e.preventDefault();
       var target = $(this.hash);
+
+      $('#section-' + (i + 2)).addClass('section--visible');
+      waitThenScroll(target);
+    });
+    
+    inputToggle.change(function(e){
+      e.preventDefault();
+      var target = $(this).closest('section').next();
+
+      $('#section-' + (i + 2)).addClass('section--visible');
+      if (i === 5) {
+        $('#section-8, #section-9').addClass('section--visible');
+        initSliders();
+      }
+      
+      if ($(this).attr('type') === 'radio') { 
+        waitThenScroll(target);
+      }
+    });
+  });
+
+  function waitThenScroll(target) {
+    setTimeout(function(){
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 1000);
-    });
-
-    inputToggle.change(function(){
-      if (i === 5) {
-        $('#section-8, #section-9').addClass('section--visible');
-      }
-      $('#section-' + (i + 2)).addClass('section--visible');
-      var target = $(this).closest('section').next();
-      
-      if ($(this).attr('type') === 'radio') { 
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-      }
-    });
-  });
-
+    }, 100)
+  }
   new WOW().init();
   
-  $('.slicky').slick({
-    lazyLoad: 'ondemand',
-    dots: true,
-    adaptiveHeight: true
-  });
+  function initSliders() {
+    $('.slicky').slick({
+      lazyLoad: 'ondemand',
+      dots: true,
+      adaptiveHeight: true
+    });
 
-  $('.slick-logos').slick({
-    lazyLoad: 'ondemand',
-    dots: true,
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    responsive: [
-    {
-      breakpoint: 980,
-      settings: {
-        slidesToShow: 2
-      }
-    }, 
-    {
-      breakpoint: 700,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-  });
+    $('.slick-logos').slick({
+      lazyLoad: 'ondemand',
+      dots: true,
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2
+        }
+      }, 
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  }
 
   // Select all links with hashes
     // $('a[href*="#"]')
