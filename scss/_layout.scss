@@ -1,0 +1,27 @@
+#site {
+    height: 100vh;
+}
+
+section {
+    padding: 100px 0; 
+    height: auto;
+    min-height: 100vh;
+    display: none;
+    position: relative;
+}
+
+.section--visible {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+}
+
+.container {
+    width: 1080px;
+    max-width: 90%;
+    margin: 0 auto;
+    -ms-align-self: center;
+    align-self: center;
+}

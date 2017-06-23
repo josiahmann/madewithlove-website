@@ -1,0 +1,41 @@
+h1 {
+    font-size: 72px;
+}
+h1 + a {
+    font-size: 26px;
+}
+h2 {
+    font-size: 56px;
+}
+
+h2 + a,
+h2 + p {
+    font-size: 26px;
+}
+
+p {
+    font-size: 22px;
+}
+
+
+@media screen and (max-width: 980px) {
+    h1{
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+    .container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 767px) {
+
+    h2 {
+        font-size: 38px;
+    }
+    .text-slider p {
+        font-size: 22px;
+    }
+}

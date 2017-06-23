@@ -1,0 +1,38 @@
+/* Helper Classes */
+
+.flex {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.orange {
+    color: $orange!important;
+}
+.purple {
+    color: $purple!important;
+}
+.white {
+    color: white!important;
+}
+.light-grey {
+    color: $light-grey!important;
+}
+.dark-grey {
+    color: $dark-grey!important;
+}

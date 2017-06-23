@@ -1,0 +1,85 @@
+.card {
+    cursor: pointer;
+    padding: 100px 20px;
+    -webkit-box-shadow: 3px 2px 8px 0 rgba(0,0,0,0.50);
+    box-shadow: 3px 2px 8px 0 rgba(0,0,0,0.50);
+    border: none;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    height: 100%;
+    position: relative;
+    opacity: .85;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.card--hover {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transform:  translateY(-3px) translateX(3px);
+    -ms-transform:  translateY(-3px) translateX(3px);
+    -o-transform:  translateY(-3px) translateX(3px);
+    transform:  translateY(-3px) translateX(3px);
+    opacity: 1;
+}
+.card--no-hover {
+    opacity: 1!important;
+}
+
+.card--hover.card--orange {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5);
+    background: $orange;
+    color: white;
+}
+
+.card--hover.card--purple {
+    -webkit-box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
+    box-shadow: 8px 8px 18px 0 rgba(0, 0, 0, 0.5), inset 0 0 0 2px $purple;
+}
+.card.slick-slide {
+    margin: 10px;
+}
+.card--testimonial {
+    cursor: default;
+}
+
+.card.slick-slide:not(.slick-current) {
+    box-shadow: none;
+}
+.card.slick-slide img {
+    max-height: 80px;
+    width: auto;
+}
+.card input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-appearance: none;
+    outline:none!important;
+}
+.card--textarea textarea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    display: none;
+}
+.card--editing textarea {
+    display: block;
+}
+.card--textarea.card--editing p {
+    display: none;
+}

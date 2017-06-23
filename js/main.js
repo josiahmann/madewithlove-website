@@ -9,6 +9,9 @@ $(document).ready(function() {
 	$('.card--checkbox').click(function(){
 		$(this).toggleClass('card--hover');
 	});
+  $('.card--textarea').click(function(){
+		$(this).addClass('card--editing');
+	});
 
 	$('input[type="checkbox"]').change(function(e) {
 			features[$(this).val()] = $(this).prop('checked');				
